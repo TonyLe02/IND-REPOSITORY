@@ -1,61 +1,110 @@
-/* -- Style for body -- */
-body {
+*{
     margin: 0;
-    background-color:#2b2b2b;
+    padding: 0;
+    font-family: sans-serif;
 }
 
-h1{
-    color: #0074d2
+.banner {
+    background-image: url(images/krs_night.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+
 }
 
-h2{
-    color: #0074d2;
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-/* -- Navigation bar design -- */
-.navbar {
 
+.navbar ul li a{
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #D0002D;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+
+}
+
+.logo{
+    width: 120px;
+    cursor: pointer;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     text-align: center;
-    color: #0074d2;
-    font-size: 50px;
-    font-family: 'Roboto', sans-serif;
-    padding-top: 10%;
+    color: #FFFFFF;
+
+}
+
+.content h1 {
+    font-size: 100px;
+    margin-top: -380px;
+
+}
+
+}
+
+button{
+    width: 240px;
     font-size: 20px;
-    font-family: 'Roboto', sans-serif;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 0 solid #FFFFFF;
+    background: transparent;
+    color: #D0002D;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+span{
+    background: #FFFFFF;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span{
     width: 100%;
 }
-/* -- Navigation bar design -- */
-section.navBar {
-    text-align: center;
 
+button:hover {
+    border: none;
 }
-
-ul li {
-    display: inline-block;
-    margin-bottom: 5px;
-    margin-top: 5px;
-    margin-right: 20px;
-}
-ul li a {
-    text-decoration: none;
-    color: #fff;
-}
-ul li a:hover {
-    color: #4CAF50;
-    transition: 0.25s;
-}
-form.form-example {
-    display: table;
-    margin: auto;
-}
-
-div.form-example {
-    display: table-row;
-}
-/* styles for input */
-label, input {
-    color: #0074d2;
-    display: table-cell;
-    margin-bottom: 10px
-}
-
-
