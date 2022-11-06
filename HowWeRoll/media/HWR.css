@@ -5,7 +5,7 @@
 }
 
 .banner {
-    background-image: url(images/krs_night.jpg);
+    background-image: url(images/night.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -87,7 +87,7 @@
 
 input {
     font-size: 20px;
-    width: 15%;
+    width: 10%;
 }
 
 
