@@ -9,9 +9,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;
-
-
+    height: 150vh;
 }
 
 .navbar{
@@ -62,11 +60,10 @@
     transform: translateY(-50%);
     text-align: center;
     color: #FFFFFF;
-
 }
 
 .content h1 {
-    font-size: 80px;
+    font-size: 50px;
     margin-top: 50px;
 }
 
@@ -80,14 +77,56 @@
     margin-top: 15px;
 }
 
+.slidecontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px 0;
+}
 .slider {
-    width: 25%;
+    margin: 0 10px;
+}
+
+
+input {
+    font-size: 12px;
+    width: 15%;
+    margin-bottom: 10px;
 
 }
 
-input {
-    font-size: 20px;
-    width: 10%;
+button {
+    width: 15%;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.id {
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+label {
+    font-size: 12px;
+}
+#btnLagre {
+    font-size: 12px;
+}
+
+pre {
+    display: none;
+}
+
+.left{
+    display: inline-block;
+    width: 150px;
+    text-align: left;
+}
+
+.right{
+    display: inline-block;
+    width: 150px;
+    text-align: right;
 }
 
 
