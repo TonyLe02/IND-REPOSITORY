@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>UIA Gruppe 7A</title>
-    <link rel="stylesheet" href="media/HWR.css">
+    <link rel="stylesheet" href="media/hwr.css">
 </head>
 
 <body>
@@ -19,10 +19,12 @@
 
         <!-- List of different options -->
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">Hjem</a></li>
+            <li><a href="../Flaggoppgaven/flaggoppgaven.html">Flaggoppg.</a></li>
             <li><a href="visitkort.html">Visitkort</a></li>
-            <li><a href="HWR.html">HWR</a></li>
+            <li><a href="hwr.html">HWR</a></li>
             <li><a href="hwr-report.html">Rapport</a></li>
+            <li><a href="kalender.html">Kalender</a></li>
         </ul>
     </div>
 
@@ -34,20 +36,22 @@
         <!-- Skriv in navn -->
             <form action="" method="get" class="form-example">
                 <div class="form-example">
-                    <label for="navn">Navn: </label>
-                    <input type="text" name="navn" id="navn" placeholder="Vennligst skriv inn navn" required>
+                    <label for="navn" id="labelnavn">Navn:
+                    <input type="text" name="navn" id="inputnavn" placeholder="Vennligst skriv inn navn" required autofocus>
+                    </label>
                 </div>
 
                 <!-- Skriv in epost -->
                 <div class="form-example">
-                    <label for="epost">Email: </label>
-                    <input type="email" name="epost" id="epost" placeholder="Vennligst skriv inn epost" required>
+                    <label for="epost" id="labelepost">Epost:
+                    <input type="email" name="epost" id="inputepost" placeholder="Vennligst skriv inn epost" required>
+                    </label>
                 </div>
 
                 <!-- Skriv inn alder -->
                 <div>
-                    <label>Alder:
-                        <input type="number" name="alder" id="alder" max="100" min="10" placeholder="Vennligst skriv inn alder">
+                    <label for="alder" id="labelalder">Alder:
+                        <input type="number" name="alder" id="inputalder" max="100" min="10" placeholder="Vennligst skriv inn alder">
                     </label>
                 </div>
 
@@ -61,7 +65,7 @@
             <div class="ioru">
                 <div class="left"> <label for="ioru">Innadvendt</label> </div>
                 <input type="range" id="ioru" name="ioru" value="50" min="0"
-                max="100" step="5" class="slider">
+                max="100" step="1" class="slider">
                 <div class="right"> <label for="ioru">Utadvendt</label> </div>
             </div>
 
@@ -69,7 +73,7 @@
             <div class="ford">
                 <div class="left"> <label for="ford">Jobbe fysisk</label> </div>
                 <input type="range" id="ford" name="ford" value="50" min="0"
-                       max="100" step="5" class="slider">
+                       max="100" step="1" class="slider">
                 <div class="right"> <label for="ford">Jobbe digitalt</label> </div>
             </div>
 
@@ -77,7 +81,7 @@
             <div class="lorf">
                  <div class="left"> <label for="lorf">Liker å lede</label> </div>
                 <input type="range" id="lorf" name="lorf" value="50" min="0"
-                   max="100" step="5" class="slider">
+                   max="100" step="1" class="slider">
                 <div class="right"> <label for="lorf">Liker å følge</label> </div>
             </div>
              
@@ -85,7 +89,7 @@
             <div class="pors">
                 <div class="left"> <label for="porr">Prossess</label> </div>
                 <input type="range" id="porr" name="porr" value="50" min="0"
-                   max="100" step="5" class="slider">
+                   max="100" step="1" class="slider">
                 <div class="right"> <label for="porr">Resultat</label> </div>
             </div>
 
@@ -93,7 +97,7 @@
             <div class="fors">
                 <div class="left"> <label for="fors"> Forberedt</label> </div>
                 <input type="range" id="fors" name="fors" value="50" min="0"
-                   max="100" step="5" class="slider">
+                   max="100" step="1" class="slider">
                 <div class="right"> <label for="fors">Spontant</label> </div>
             </div>
 
@@ -101,7 +105,7 @@
             <div class="mork">
                 <div class="left"> <label for="mork">Morgenfugl</label> </div>
                 <input type="range" id="mork" name="mork" value="50" min="0"
-                max="100" step="5" class="slider">
+                max="100" step="1" class="slider">
                 <div class="right"> <label for="mork">Nattugle</label> </div>
             </div>
 
@@ -109,7 +113,7 @@
             <div class="sorm">
                 <div class="left"> <label for="sorm">Møtes på skolen</label> </div>
                 <input type="range" id="sorm" name="sorm" value="50" min="0"
-                max="100" step="5" class="slider">
+                max="100" step="1" class="slider">
                 <div class="right"> <label for="sorm">Annen plass</label> </div>
             </div>
 
@@ -117,7 +121,7 @@
             <div class="forf">
                 <div class="left"> <label for="forf">Fast arbeidstid</label> </div>
                 <input type="range" id="forf" name="forf" value="50" min="0"
-                max="100" step="5" class="slider">
+                max="100" step="1" class="slider">
                 <div class="right"> <label for="forf">Fleksibel tid</label> </div>
             </div>
                 
@@ -144,7 +148,8 @@
                 timetrxidCOPY.hidden=false;
             }
 
-            <!-- Kode fra Janis -->
+             
+             
             // From https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch (seen 2022-11-02)
             // Example POST method implementation using fetch:
             async function postData(url = '', data = {}) {
