@@ -1,0 +1,18 @@
+import java.util.ArrayList;
+
+public class AutoboxingExample {
+    public static void main(String[] args) {
+        ArrayList<Integer> numbers = new ArrayList<Integer>();
+        int x = 5;
+        numbers.add(x); // autoboxing skjer her
+        System.out.println(numbers.get(0));
+    }
+}
+
+public class IntegerParsingExample {
+    public static void main(String[] args) {
+        String numStr = "10";
+        int num = Integer.parseInt(numStr); // num = 10
+        System.out.println(num);
+    }
+}

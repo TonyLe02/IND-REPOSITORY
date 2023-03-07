@@ -1,0 +1,37 @@
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Random;
+
+public class klassebibtest {
+    public static void main(String[] args) {
+        String navn = "Tony Le";
+        String streng1 = "Hei";
+        String streng2 = "Hei";
+        if(streng1.equals(streng2)) {
+            System.out.println("Strengene er like");
+        }
+
+        String tallSomStreng = "123";
+        int tallSomInteger = Integer.parseInt(tallSomStreng);
+
+        Random rand = new Random();
+        int tilfeldigTall = rand.nextInt();
+
+        Random rand2 = new Random();
+        int tilfeldigTall2 = rand2.nextInt(100) + 1;
+
+        HashMap<String, Integer> telefonliste = new HashMap<>();
+        telefonliste.put("Tony", 12345678);
+
+        int telefonnummer = telefonliste.get("Tony");
+
+        HashSet<String> navneliste = new HashSet<>();
+        navneliste.add("Tony");
+
+        HashSet<String> navneliste2 = new HashSet<>();
+        navneliste2.add("Tony");
+        if(navneliste2.contains("Tony")) {
+            System.out.println("Tony finnes i navnelisten");
+        }
+    }
+}

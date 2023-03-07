@@ -7,4 +7,13 @@ public class MusicOrganizer {
     public MusicOrganizer() {
         files = new ArrayList<>();
     }
+		// Legg til filer
+    public void addFiles(String filename) {
+        files.add(filename);
+    }
+		// Hent number av filer
+    public int getNumberOfFiles() {
+        return files.size();
+    }
+
 }

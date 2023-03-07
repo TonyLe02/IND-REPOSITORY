@@ -1,0 +1,41 @@
+/**
+Dette er en klasse for å organisere musikkfiler.
+Den inneholder en liste over filnavn.
+@author (Ditt navn)
+@version (Versjonsnummer eller dato)
+ */
+import java.util.ArrayList;
+public class MusicOrganizer {
+
+    private ArrayList<String> files;
+    /**
+     * Konstruktør for å opprette et MusicOrganizer-objekt.
+     * Den oppretter en tom liste over filnavn.
+     */
+    public MusicOrganizer() {
+        files = new ArrayList<>();
+    }
+
+    /**
+     * Legger til et filnavn i MusicOrganizer-objektet.
+     * 
+     * @param filename filnavnet som skal legges til.
+     * @throws NullPointerException hvis filename er null.
+     */
+    public void addFiles(String filename) throws NullPointerException {
+        if (filename == null) {
+            throw new NullPointerException("Filename cannot be null.");
+        }
+        files.add(filename);
+    }
+
+    /**
+     * Henter antall filer i MusicOrganizer-objektet.
+     * 
+     * @return antall filer i MusicOrganizer-objektet.
+     */
+    public int getNumberOfFiles() {
+        return files.size();
+    }
+
+}
