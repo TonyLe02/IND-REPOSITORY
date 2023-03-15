@@ -1,3 +1,4 @@
+// Eksempel på Encapsulation
 public class Person {
     private String name;   // Privat variabel for personens navn
     private int age;       // Privat variabel for personens alder

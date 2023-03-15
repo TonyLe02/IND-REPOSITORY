@@ -1,3 +1,4 @@
+// Eksempel på god cohesion
 public class Student {
     private String navn; // Variabel for studentens navn
     private int alder; // Variabel for studentens alder

@@ -1,3 +1,4 @@
+// Eksempel på dårlig cohesion
 public class Student2 { // definerer klassen "Student"
     private String name; // privat variabel for studentens navn
     private int age; // privat variabel for studentens alder
